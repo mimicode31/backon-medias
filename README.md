@@ -27,15 +27,21 @@ Le script qui s'en charge est `publier/medias.mjs`, dans `backon-brand`.
 
 ## Adresses
 
-Les fichiers sont servis par GitHub Pages :
+Les fichiers sont servis directement par GitHub :
 
 ```
-https://mimicode31.github.io/backon-medias/medias/<nom>.jpg
+https://raw.githubusercontent.com/mimicode31/backon-medias/main/medias/<nom>.jpg
 ```
 
-`robots.txt` interdit l'indexation. Ce n'est pas une protection, seulement de
-l'hygiène : ces visuels n'ont pas à remonter dans les résultats de recherche à
-la place des pages du site.
+Le dépôt étant public, cette adresse répond sans authentification et avec le
+bon type de contenu, ce qui est tout ce que demande le récupérateur de médias
+de Meta. Elle a l'avantage d'être disponible immédiatement, là où GitHub Pages
+reconstruit le site après chaque dépôt et peut mettre une minute : avec un
+dépôt juste avant publication, ce délai posait problème.
+
+GitHub Pages reste activable si le volume devenait important, `raw` n'étant
+pas prévu pour servir de CDN. Le `robots.txt` et la page d'accueil de ce dépôt
+sont là pour ce cas.
 
 ## Format
 
